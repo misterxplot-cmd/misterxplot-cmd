@@ -1,70 +1,65 @@
-# Привет! Я ML-инженер / Data Scientist <img src="https://giphy.com" width="35px">
+# Привет! Я ML-инженер / Data Scientist 👋
 
-<img src="https://giphy.com" align="right" width="180px" />
-
-Специализируюсь на разработке ML-моделей, построении высокопроизводительных пайплайнов обработки данных и создании риск-API.
+> Специализируюсь на разработке ML-моделей, построении высокопроизводительных пайплайнов обработки данных и создании риск-API.
 
 ---
 
 ### 🛠 Мой технологический стек
 
-<p align="left">
-  <!-- Языки и БД -->
-  <img src="https://shields.io" />
-  <img src="https://shields.io" />
-  <img src="https://shields.io" />
-  <br/>
-  <!-- ML / Анализ данных -->
-  <img src="https://shields.io" />
-  <img src="https://shields.io" />
-  <img src="https://shields.io" />
-  <img src="https://shields.io" />
-  <br/>
-  <!-- Инженерия и MLOps -->
-  <img src="https://shields.io" />
-  <img src="https://shields.io" />
-  <img src="https://shields.io" />
-  <br/>
-  <!-- Инфраструктура -->
-  <img src="https://shields.io" />
-  <img src="https://shields.io" />
-  <img src="https://shields.io" />
-  <img src="https://shields.io" />
-</p>
+```python
+# [HARD SKILLS & CORE TECH]
+
+LANGUAGES     = ["Python", "SQL"]
+DATABASES     = ["PostgreSQL"]
+
+ML_DATA_DS    = ["Pandas", "NumPy", "Scikit-Learn", "CatBoost"]
+OPTIMIZATION  = ["Numba (JIT-компиляция)", "SciPy", "Statsmodels"]
+
+ENGINEERING   = ["PySpark", "Apache Airflow", "Apache Kafka", "MLflow"]
+INFRA_TOOLS   = ["Docker", "Linux", "Git"]
+```
 
 ---
 
 ### 🚀 Ключевые проекты
 
-🔥 **[dutch-auction](https://github.com)**
-* **Суть:** Учебная симуляция голландского аукциона на Python.
-* **Что сделано:** Реализовал 5 различных торговых стратегий, алгоритмы оценки справедливой стоимости и визуализацию графиков изменения цен.
+<details>
+<summary><b>📊 dutch-auction — [Узнать больше]</b></summary>
+<br>
 
-⚡ **[transaction-risk-api](https://github.com)**
-* **Суть:** Сервис на FastAPI для инференса моделей оценки риска транзакций.
-* **Что сделано:** Настроил строгую валидацию входных данных, реализовал механизмы для одиночных и пакетных (batch) прогнозов, развернул демо-модель и покрыл сервис тестами.
+*   **Суть:** Учебная симуляция голландского аукциона на Python.
+*   **Что сделано:** Реализовал 5 различных торговых стратегий, алгоритмы оценки справедливой стоимости и визуализацию графиков изменения цен.
+</details>
 
-🌌 **[numba-session-features](https://github.com)**
-* **Суть:** Высокопроизводительный расчёт признаков пользовательских сессий.
-* **Что сделано:** Оптимизировал вычисления с использованием связки Python и Numba (JIT-компиляция). Провел детальный бенчмарк скорости работы и реализовал классификацию на scikit-learn с использованием синтетических данных.
+<details>
+<summary><b>🛡️ transaction-risk-api — [Узнать больше]</b></summary>
+<br>
 
-💎 **[transaction-risk-ml](https://github.com)**
-* **Суть:** Проект по исследованию и классификации рисков финансовых транзакций.
-* **Что сделано:** Провел полный пайплайн анализа данных на pandas и scikit-learn, настроил сравнение признаков (Feature Engineering) и выстроил валидацию для проверки утечек данных (Data Leakage).
+*   **Суть:** Сервис на FastAPI для инференса моделей оценки риска транзакций.
+*   **Что сделано:** Настроил строгую валидацию входных данных, реализовал механизмы для одиночных и пакетных (batch) прогнозов, развернул демо-модель и покрыл сервис тестами.
+</details>
 
----
+<details>
+<summary><b>💡 numba-session-features — [Узнать больше]</b></summary>
+<br>
 
-### 📊 Моя GitHub Статистика
+*   **Суть:** Высокопроизводительный расчёт признаков пользовательских сессий.
+*   **Что сделано:** Оптимизировал вычисления с использованием связки Python и Numba (JIT-компиляция). Провел детальный бенчмарк скорости работы и реализовал классификацию на scikit-learn с использованием синтетических данных.
+</details>
 
-<p align="left">
-  <img src="https://vercel.app" height="150" />
-  <img src="https://vercel.app" height="150" />
-</p>
+<details>
+<summary><b>📈 transaction-risk-ml — [Узнать больше]</b></summary>
+<br>
+
+*   **Суть:** Проект по исследованию и классификации рисков финансовых транзакций.
+*   **Что сделано:** Провел полный пайплайн анализа данных на pandas и scikit-learn, настроил сравнение признаков (Feature Engineering) и выстроил валидацию для проверки утечек данных (Data Leakage).
+</details>
 
 ---
 
 ### 📬 Связаться со мной:
-* **Telegram:** @Edgrel
-* **Email:** misterxplot@gmail.com
+*   **Telegram:** @Edgrel
+*   **Email:** misterxplot@gmail.com
+
 
 

@@ -20,22 +20,30 @@
 ### 🛠 Languages and Tools:
 
 <p align="left">
-  <!-- Python -->
-  <a href="https://python.org" target="_blank" rel="noreferrer"><img src="https://githubusercontent.com" alt="python" width="40" height="40"/></a> &nbsp;
-  <!-- PostgreSQL -->
-  <a href="https://postgresql.org" target="_blank" rel="noreferrer"><img src="https://githubusercontent.com" alt="postgresql" width="40" height="40"/></a> &nbsp;
-  <!-- Pandas -->
-  <a href="https://pydata.org" target="_blank" rel="noreferrer"><img src="https://githubusercontent.com" alt="pandas" width="40" height="40"/></a> &nbsp;
-  <!-- NumPy -->
-  <a href="https://numpy.org" target="_blank" rel="noreferrer"><img src="https://githubusercontent.com" alt="numpy" width="40" height="40"/></a> &nbsp;
-  <!-- Apache Spark -->
-  <a href="https://apache.org" target="_blank" rel="noreferrer"><img src="https://githubusercontent.com" alt="spark" width="40" height="40"/></a> &nbsp;
-  <!-- Docker -->
-  <a href="https://docker.com" target="_blank" rel="noreferrer"><img src="https://githubusercontent.com" alt="docker" width="40" height="40"/></a> &nbsp;
-  <!-- Linux -->
-  <a href="https://linux.org" target="_blank" rel="noreferrer"><img src="https://githubusercontent.com" alt="linux" width="40" height="40"/></a> &nbsp;
-  <!-- Git -->
-  <a href="https://git-scm.com" target="_blank" rel="noreferrer"><img src="https://githubusercontent.com" alt="git" width="40" height="40"/></a>
+  <a href="https://python.org" target="_blank" rel="noreferrer">
+    <img src="https://jsdelivr.net" alt="python" width="40" height="40"/>
+  </a> &nbsp;
+  <a href="https://postgresql.org" target="_blank" rel="noreferrer">
+    <img src="https://jsdelivr.net" alt="postgresql" width="40" height="40"/>
+  </a> &nbsp;
+  <a href="https://pydata.org" target="_blank" rel="noreferrer">
+    <img src="https://jsdelivr.net" alt="pandas" width="40" height="40"/>
+  </a> &nbsp;
+  <a href="https://numpy.org" target="_blank" rel="noreferrer">
+    <img src="https://jsdelivr.net" alt="numpy" width="40" height="40"/>
+  </a> &nbsp;
+  <a href="https://apache.org" target="_blank" rel="noreferrer">
+    <img src="https://jsdelivr.net" alt="spark" width="40" height="40"/>
+  </a> &nbsp;
+  <a href="https://docker.com" target="_blank" rel="noreferrer">
+    <img src="https://jsdelivr.net" alt="docker" width="40" height="40"/>
+  </a> &nbsp;
+  <a href="https://linux.org" target="_blank" rel="noreferrer">
+    <img src="https://jsdelivr.net" alt="linux" width="40" height="40"/>
+  </a> &nbsp;
+  <a href="https://git-scm.com" target="_blank" rel="noreferrer">
+    <img src="https://jsdelivr.net" alt="git" width="40" height="40"/>
+  </a>
 </p>
 
 ---

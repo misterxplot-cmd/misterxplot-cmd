@@ -364,226 +364,87 @@
 
 # 🚀 Key Projects
 
-<details>
-<summary>
-  <b>📈 dutch-auction</b> — Симулятор голландского аукциона
-</summary>
-
-<br>
-
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/OOP-7C3AED?style=flat-square" alt="OOP" />
-  <img src="https://img.shields.io/badge/Matplotlib-11557C?style=flat-square" alt="Matplotlib" />
-  <img src="https://img.shields.io/badge/Simulation-F59E0B?style=flat-square&logoColor=white" alt="Simulation" />
-</p>
-
-### Задача
-
-Смоделировать торги с понижением цены и сравнить поведение агентов
-с разными бюджетами, оценками стоимости и правилами покупки.
-
-### Реализация
-
-- Разделил логику на классы **Lot**, **Agent** и **Auction**.
-- Реализовал **5 стратегий агентов** и ограничения по бюджету.
-- Добавил генерацию истории цен с **возвратом к среднему**.
-- Смоделировал покупку лотов и последующую перепродажу.
-- Рассчитал прибыль агентов, выручку аукциона и ошибки оценки стоимости.
-- Сохранил параметры и результаты в JSON, построил три графика.
-
-| Масштаб симуляции | Значение |
-|---|---:|
-| Лоты / агенты | 20 / 5 |
-| История цен | 180 дней |
-| Последующий рынок | 30 дней |
-| Seed | 42 |
-
-**Результат:** воспроизводимая учебная симуляция с визуализацией
-и выгрузкой `results.json`. Цены синтетические; методы оценки и стратегии
-меняются совместно, поэтому их отдельный вклад не измеряется.
-
-<p>
-  <a href="https://github.com/misterxplot-cmd/dutch-auction">
-    <img src="https://img.shields.io/badge/Open_Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="Репозиторий dutch-auction" />
-  </a>
-  <a href="https://github.com/misterxplot-cmd/dutch-auction/blob/main/dutch_auction.py">
-    <img src="https://img.shields.io/badge/Source_Code-7C3AED?style=for-the-badge" alt="Код симулятора" />
-  </a>
-</p>
-
-</details>
-
-<br>
-
-<details>
-<summary>
-  <b>🛡 transaction-risk-api</b> — API для ML-инференса
-</summary>
-
-<br>
-
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" />
-  <img src="https://img.shields.io/badge/Pydantic-E92063?style=flat-square&logo=pydantic&logoColor=white" alt="Pydantic" />
-  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn" />
-  <img src="https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white" alt="pytest" />
-</p>
-
-### Задача
-
-Предоставить доступ к обученной модели классификации риска транзакций
-через HTTP API с проверкой входных данных и готовности модели.
-
-### Реализация
-
-- Разработал **одиночный и пакетный инференс**: до 100 транзакций в запросе.
-- Описал схемы Pydantic, ограничения полей и обработку некорректных данных.
-- Добавил загрузку модели при старте приложения и проверку артефакта.
-- Разделил проверки **health**, **readiness** и получение метаданных модели.
-- Предусмотрел ответ **503**, если модель недоступна.
-- Проверил согласованность одиночных и пакетных прогнозов, ошибки валидации
-  и доступность OpenAPI в тестах.
-
-| Маршрут | Назначение |
-|---|---|
-| `POST /predict` | Прогноз для одной транзакции |
-| `POST /predict/batch` | Пакет из 1–100 транзакций |
-| `GET /health` | Доступность приложения |
-| `GET /ready` | Готовность модели |
-| `GET /model` | Метаданные модели |
-| `GET /docs` | Интерактивная документация |
-
-**Два режима:** быстрый запуск с синтетической demo-моделью
-и загрузка артефакта `behavior_only` из **transaction-risk-ml**.
-Учебный локальный сервис; оценки классов не являются калиброванными
-вероятностями реального мошенничества.
-
-<p>
-  <a href="https://github.com/misterxplot-cmd/transaction-risk-api">
-    <img src="https://img.shields.io/badge/Open_Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="Репозиторий transaction-risk-api" />
-  </a>
-  <a href="https://github.com/misterxplot-cmd/transaction-risk-api/blob/main/EXPLAIN.md">
-    <img src="https://img.shields.io/badge/Architecture-009688?style=for-the-badge" alt="Разбор архитектуры API" />
-  </a>
-</p>
-
-</details>
-
-<br>
-
-<details>
-<summary>
-  <b>⚡ numba-session-features</b> — Ускорение расчёта признаков
-</summary>
-
-<br>
-
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" alt="NumPy" />
-  <img src="https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="pandas" />
-  <img src="https://img.shields.io/badge/Numba-00A3E0?style=flat-square&logo=numba&logoColor=white" alt="Numba" />
-  <img src="https://img.shields.io/badge/Benchmarking-7C3AED?style=flat-square" alt="Benchmarking" />
-</p>
-
-### Задача
-
-Ускорить вычисление признаков пользовательских сессий и проверить,
-какую часть времени занимает JIT-компиляция, а какую — повторные вычисления.
-
-### Реализация
-
-- Подготовил синтетические события и расчёт сессионных признаков.
-- Скомпилировал вычислительное ядро через **Numba JIT**.
-- Проверил совпадение результатов Python и Numba с допуском `1e-12`.
-- Отдельно измерил первый вызов с компиляцией и повторные вызовы.
-- Чередовал порядок запусков и сравнил медианы **7 повторов**.
-- Добавил учебную классификацию искусственных сценариев сессий.
-
-### Контрольный бенчмарк
-
-**10 000 сессий · 557 968 событий**
-
-| Измерение | Время |
-|---|---:|
-| Python-циклы, медиана | 0,365116 с |
-| Первый вызов Numba с компиляцией | 0,494138 с |
-| Повторные вызовы Numba, медиана | 0,001081 с |
-
-**Ускорение прогретого вычислительного ядра — 337,79×.**
-Коэффициент относится к сравнению с Python-циклами;
-генерация данных, ввод/вывод и обучение в него не входят.
-
-<p>
-  <a href="https://github.com/misterxplot-cmd/numba-session-features">
-    <img src="https://img.shields.io/badge/Open_Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="Репозиторий numba-session-features" />
-  </a>
-  <a href="https://github.com/misterxplot-cmd/numba-session-features/blob/main/RESULTS.md">
-    <img src="https://img.shields.io/badge/Benchmark_Results-7C3AED?style=for-the-badge" alt="Результаты бенчмарка" />
-  </a>
-</p>
-
-</details>
-
-<br>
-
-<details>
-<summary>
-  <b>📊 transaction-risk-ml</b> — Классификация риска транзакций
-</summary>
-
-<br>
-
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="pandas" />
-  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn" />
-  <img src="https://img.shields.io/badge/Feature_Engineering-2563EB?style=flat-square" alt="Feature Engineering" />
-  <img src="https://img.shields.io/badge/Leakage_Analysis-B91C1C?style=flat-square" alt="Leakage Analysis" />
-</p>
-
-### Задача
-
-Исследовать классификацию риска транзакций и влияние готовой оценки риска
-и типа операции на качество модели. Работа выросла из командного
-научно-исследовательского семинара Финансового университета.
-
-### Данные и эксперимент
-
-**78 600 строк · 3 класса риска · стратифицированный split 80/20**
-
-| Вариант | Признаки |
-|---|---|
-| `dummy` | Предсказание самого частого класса |
-| `with_score` | Поведенческие поля, тип операции и готовый risk_score |
-| `without_score` | Признаки без risk_score |
-| `behavior_only` | Признаки без risk_score и transaction_type |
-
-### Реализация
-
-- Подготовил EDA, валидацию данных и наборы признаков.
-- Объединил импутацию, кодирование категорий и модель в **Pipeline**.
-- Сравнил варианты на одной выборке при одинаковых параметрах Random Forest.
-- Исключил идентификаторы, timestamp и целевую метку из признаков.
-- Сохранил метрики, матрицы ошибок и артефакт модели со схемой входов.
-- Подготовил `behavior_only` для использования в **transaction-risk-api**.
-
-**Результат:** воспроизводимое сравнение наборов признаков и разбор
-подсказок в учебных данных. Классы набора не подтверждают наличие
-реального мошенничества или скомпрометированных кошельков.
-
-<p>
-  <a href="https://github.com/misterxplot-cmd/transaction-risk-ml">
-    <img src="https://img.shields.io/badge/Open_Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="Репозиторий transaction-risk-ml" />
-  </a>
-  <a href="https://github.com/misterxplot-cmd/transaction-risk-ml/blob/main/RESULTS.md">
-    <img src="https://img.shields.io/badge/Experiment_Results-2563EB?style=for-the-badge" alt="Результаты экспериментов" />
-  </a>
-</p>
-
-</details>
+<table width="100%">
+  <tr>
+    <td width="50%" valign="top">
+      <p><img src="https://img.shields.io/badge/DATA%20SCIENCE-2563EB?style=flat-square" alt="DATA SCIENCE" height="20" /></p>
+      <h3><a href="https://github.com/misterxplot-cmd/transaction-risk-ml">📊 Классификация риска ↗</a></h3>
+      <p>Исследование того, как готовая оценка риска и тип операции влияют на качество классификатора.</p>
+      <p><strong>78 600 строк · 3 класса риска</strong><br>Macro F1: <strong>0,5834</strong> против 0,2979 у baseline.<br><sub>Behavior-only · учебный набор · единый test split.</sub></p>
+      <p><code>Python</code> <code>pandas</code> <code>scikit-learn</code></p>
+      <p><a href="https://github.com/misterxplot-cmd/transaction-risk-ml"><strong>Репозиторий ↗</strong></a> · <a href="https://github.com/misterxplot-cmd/transaction-risk-ml/blob/main/RESULTS.md">Результаты</a></p>
+      <details>
+        <summary><strong>Реализация и детали эксперимента</strong></summary>
+        <ul>
+          <li>Работа выросла из командного научно-исследовательского семинара Финансового университета.</li>
+          <li>Сравнил четыре сценария на одном стратифицированном split 80/20: dummy, with_score, without_score и behavior_only.</li>
+          <li>Объединил импутацию, OneHotEncoder и Random Forest в Pipeline; преобразования обучаются только на train.</li>
+          <li>Проверил влияние risk_score и transaction_type; исключил идентификаторы, timestamp и целевую метку из признаков.</li>
+          <li>Сохранил метрики, матрицы ошибок, схему входов и модель behavior_only для соседнего API-проекта.</li>
+        </ul>
+        <p><sub>Метки учебного набора описывают моделируемые риски, а не подтверждённые случаи мошенничества.</sub></p>
+      </details>
+    </td>
+    <td width="50%" valign="top">
+      <p><img src="https://img.shields.io/badge/ML%20ENGINEERING-0D9488?style=flat-square" alt="ML ENGINEERING" height="20" /></p>
+      <h3><a href="https://github.com/misterxplot-cmd/transaction-risk-api">🛡 API для ML-инференса ↗</a></h3>
+      <p>FastAPI-сервис для модели риска транзакций: от проверки запроса до одиночного или пакетного прогноза.</p>
+      <p><strong>Одиночный и batch-инференс</strong><br>Пакеты до <strong>100 транзакций</strong>.<br><sub>Demo-модель или артефакт из transaction-risk-ml.</sub></p>
+      <p><code>FastAPI</code> <code>Pydantic</code> <code>pytest</code></p>
+      <p><a href="https://github.com/misterxplot-cmd/transaction-risk-api"><strong>Репозиторий ↗</strong></a> · <a href="https://github.com/misterxplot-cmd/transaction-risk-api/blob/main/EXPLAIN.md">Архитектура</a></p>
+      <details>
+        <summary><strong>Реализация и детали эксперимента</strong></summary>
+        <ul>
+          <li>Описал схемы входов в Pydantic: ограничения значений, запрет лишних полей и валидация размера пакета.</li>
+          <li>Добавил загрузку модели при старте, проверку схемы артефакта, классов и версии scikit-learn.</li>
+          <li>Разделил health, readiness и метаданные модели; при отсутствии модели сервис возвращает 503.</li>
+          <li>Реализовал POST /predict и POST /predict/batch, интерактивную документацию OpenAPI.</li>
+          <li>Проверил одиночные и пакетные ответы, ошибки валидации и поведение без модели в тестах.</li>
+        </ul>
+        <p><sub>Локальный учебный сервис; оценки классов не являются калиброванными вероятностями реального мошенничества.</sub></p>
+      </details>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <p><img src="https://img.shields.io/badge/PERFORMANCE-7C3AED?style=flat-square" alt="PERFORMANCE" height="20" /></p>
+      <h3><a href="https://github.com/misterxplot-cmd/numba-session-features">⚡ Ускорение признаков ↗</a></h3>
+      <p>Расчёт признаков пользовательских сессий и эксперимент с JIT-компиляцией одного вычислительного ядра.</p>
+      <p><strong>337,79× после JIT-компиляции</strong><br>Прогретое ядро против Python-циклов.<br><sub>10 000 сессий · 557 968 синтетических событий.</sub></p>
+      <p><code>Python</code> <code>NumPy</code> <code>Numba</code></p>
+      <p><a href="https://github.com/misterxplot-cmd/numba-session-features"><strong>Репозиторий ↗</strong></a> · <a href="https://github.com/misterxplot-cmd/numba-session-features/blob/main/RESULTS.md">Бенчмарк</a></p>
+      <details>
+        <summary><strong>Реализация и детали эксперимента</strong></summary>
+        <ul>
+          <li>Скомпилировал ту же функцию через Numba и проверил совпадение признаков с допуском 1e-12.</li>
+          <li>Отдельно измерил первый вызов с компиляцией и повторные запуски; чередовал порядок семи повторов.</li>
+          <li>Python: медиана 0,365116 с. Numba: первый вызов 0,494138 с, медиана повторных вызовов 0,001081 с.</li>
+          <li>Добавил классификацию искусственных сценариев: dummy, LogisticRegression и Random Forest.</li>
+        </ul>
+        <p><sub>Коэффициент ускорения исключает генерацию, ввод/вывод и обучение; это не сравнение с векторизованным pandas.</sub></p>
+      </details>
+    </td>
+    <td width="50%" valign="top">
+      <p><img src="https://img.shields.io/badge/PYTHON%20%2F%20OOP-B45309?style=flat-square" alt="PYTHON / OOP" height="20" /></p>
+      <h3><a href="https://github.com/misterxplot-cmd/dutch-auction">📈 Симулятор аукциона ↗</a></h3>
+      <p>Модель голландского аукциона с понижением цены, ограниченными бюджетами и разными стратегиями покупки.</p>
+      <p><strong>20 лотов · 5 агентов</strong><br>Синтетические цены с возвратом к среднему.<br><sub>Воспроизводимый запуск · JSON · три графика.</sub></p>
+      <p><code>Python</code> <code>OOP</code> <code>Matplotlib</code></p>
+      <p><a href="https://github.com/misterxplot-cmd/dutch-auction"><strong>Репозиторий ↗</strong></a> · <a href="https://github.com/misterxplot-cmd/dutch-auction/blob/main/dutch_auction.py">Код симулятора</a></p>
+      <details>
+        <summary><strong>Реализация и детали эксперимента</strong></summary>
+        <ul>
+          <li>Разделил участников, лоты и проведение торгов на классы Agent, Lot и Auction.</li>
+          <li>Реализовал пять стратегий агентов, оценку справедливой стоимости и ограничения по бюджету.</li>
+          <li>Сгенерировал 180 дней истории цен и 30 дней последующего рынка с возвратом к среднему.</li>
+          <li>Смоделировал перепродажу, рассчитал прибыль агентов, выручку аукциона и ошибки оценки.</li>
+          <li>Сохранил параметры и результаты в results.json, визуализацию — в auction.png; seed = 42.</li>
+        </ul>
+        <p><sub>Метод оценки стоимости и стратегия агента меняются совместно: их отдельное влияние не измеряется.</sub></p>
+      </details>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -633,3 +494,4 @@
     />
   </a>
 </p>
+
